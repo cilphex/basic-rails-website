@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic Website</title>
+    <meta charset="utf-8">
+    <meta name="description" content="A basic website">
+    <meta name="keywords" content="basic, website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6f5499">
+    <link rel="shortcut icon" href="/assets/icons/heart-purple.png" />
+    <%= stylesheet_link_tag "//fonts.googleapis.com/css?family=Open+Sans" %>
+    <%= stylesheet_link_tag "//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" %>
+    <%= javascript_include_tag "//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js" %>
+    <%= javascript_include_tag "//www.google.com/recaptcha/api.js?onload=recaptchaLoaded&render=explicit", async: true, defer: true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body class="<%= body_classes %>">
+    <%= yield %>
+    <%= render 'shared/footer' %>
+    <%= render 'shared/analytics' %>
+  </body>
+</html>
